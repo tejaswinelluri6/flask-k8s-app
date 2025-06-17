@@ -1,20 +1,20 @@
-# 🚀 Flask App on Kubernetes with Helm 
+# Flask App on Kubernetes with Helm 
 
-This repository contains a simple Python Flask web application deployed to a Kubernetes cluster using Helm. It supports access via `kubectl port-forward` and optionally through Ingress.
+This repository contains a simple Python Flask web application deployed to a Kubernetes cluster using Helm. It supports access via `kubectl port-forward`.
 
 ---
 
-## 🧱 Features
+## Features
 
 - Lightweight Flask web app
 - Dockerized for portability
 - Deployed via Helm chart
-- Supports Kubernetes Service (port-forward) and Ingress
+- Supports Kubernetes Service (port-forward) 
 - Customizable via `values.yaml`
 
 ---
 
-## 🐳 Docker Setup
+## Docker Setup
 
 ### 1. Build the Docker Image
 ```bash
@@ -26,11 +26,11 @@ docker build -t tejaswinelluri/flask-k8s-app:latest .
 docker push tejaswinelluri/flask-k8s-app
 ```
 
-Update `image.repository` and `image.tag` in your Helm `values.yaml` file accordingly.
+Update `image.repository` and `image.tag` in the Helm `values.yaml` file accordingly.
 
 ---
 
-## ☸️ Deploy to Kubernetes with Helm
+##  Deploy to Kubernetes with Helm
 
 ### 1. Install the Chart
 ```bash
@@ -50,11 +50,11 @@ helm uninstall flask-release
 
 ---
 
-## 🌐 Accessing the Application
+## Accessing the Application
 
 ### Port Forwarding
 ```bash
-kubectl port-forward service/flask-app 8080:8080
+kubectl port-forward service/flask-release-flask 8080:8080
 ```
 
 Then access in your browser:
