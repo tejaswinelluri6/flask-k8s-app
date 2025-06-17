@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: nelluritejaswi/flask-k8s-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort  
+  port: 8080
+
+containerPort: 8080
