@@ -16,7 +16,7 @@ COPY . /app
 USER appuser
 
 # Expose the port that the app will run on (5000 in this case)
-EXPOSE 5000
+EXPOSE 8080
 
 # Set the command to run your Flask app
 CMD ["python3", "app.py"]
